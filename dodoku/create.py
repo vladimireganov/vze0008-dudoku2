@@ -5,7 +5,7 @@ def _create(parms):
     grid = []
     level = 1
     if "level" in parms.keys():
-        if not isinstance(parms['level'],string):
+        if not isinstance(parms['level'],str):
             return {'status': 'error: Level input is not string'}
         level = parms['level']
     if level == '1':
