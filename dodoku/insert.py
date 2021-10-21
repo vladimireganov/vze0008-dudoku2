@@ -2,6 +2,7 @@ from typing import NoReturn
 
 
 def _insert(parms):
+    print(parms)
     # parse value
     value = parms['value']
     if value > 9:
