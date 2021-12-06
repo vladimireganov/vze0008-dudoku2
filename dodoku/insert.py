@@ -39,26 +39,26 @@ def _insert(parms):
         result = {'status': 'error: invalid cell reference'}# fixed
         return result
     if cell[2] == "C" or cell[2] == "c":
-        if cell[3]<'0' or cell[3] > '9':
+        if cell[3]<"0" or cell[3] > "9":
             result = {'status': 'error: invalid cell reference'}# fixed
             return result
         row = int(cell[1])
         if len(cell)==4:
             column = int(cell[3])
         else:
-            if cell[4]<'0' or cell[4] > '9':
+            if cell[4]<"0" or cell[4] > "9":
                 result = {'status': 'error: invalid cell reference'}# fixed
                 return result
             column = int(cell[3:])
         
     else:
-        if cell[1]<'0' or cell[1] > '9':
+        if cell[1]<"0" or cell[1] > "9":
             result = {'status': 'error: invalid cell reference'}# fixed
             return result
-        if cell[2]<'0' or cell[2] > '9':
+        if cell[2]<"0" or cell[2] > "9":
             result = {'status': 'error: invalid cell reference'}# fixed
             return result
-        if cell[4]<'0' or cell[4] > '9':
+        if cell[4]<"0" or cell[4] > "9":
             result = {'status': 'error: invalid cell reference'}# fixed
             return result
         
@@ -67,7 +67,7 @@ def _insert(parms):
         if len(cell) == 5:
             column = int(cell[4])
         elif len(cell) == 6:
-            if cell[5]<'0' or cell[5] > '9':
+            if cell[5]<"0" or cell[5] > "9":
                 result = {'status': 'error: invalid cell reference'}# fixed
                 return result
             column = int(cell[4:])
