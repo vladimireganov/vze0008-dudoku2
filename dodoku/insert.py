@@ -42,6 +42,9 @@ def _insert(parms):
         if cell[3]<"0" or cell[3] > "9":
             result = {'status': 'error: invalid cell reference'}# fixed
             return result
+        if cell[1]<"0" or cell[1] > "9":
+            result = {'status': 'error: invalid cell reference'}# fixed
+            return result
         row = int(cell[1])
         if len(cell)==4:
             column = int(cell[3])
