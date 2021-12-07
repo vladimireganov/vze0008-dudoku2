@@ -76,6 +76,8 @@ def _recommend(parms):
         #print((row-1)*9 + column-1)
         if grid[(row-1)*9 + column-1] != 0:
             suggest = []
+            if grid[(row-1)*9 + column-1] > 0:
+                suggest = grid[(row-1)*9 + column-1]
             result = {'status': 'ok','recommendation':suggest}
             return result
             
@@ -84,6 +86,8 @@ def _recommend(parms):
         #print(54+(row-1-6)*9 + column-1)
         if grid[54+(row-1-6)*15 + column-1] != 0:
             suggest = []
+            if grid[54+(row-1-6)*15 + column-1] > 0:
+                suggest = grid[54+(row-1-6)*15 + column-1]
             result = {'status': 'ok','recommendation':suggest}
         
             return result
@@ -93,6 +97,8 @@ def _recommend(parms):
         #print(54+45+(row-1-9)*9 + column-1-6)
         if grid[54+45+(row-1-9)*9 + column-1-6] != 0:
             suggest = []
+            if grid[54+45+(row-1-9)*9 + column-1-6] > 0:
+                suggest = grid[54+45+(row-1-9)*9 + column-1-6]
             result = {'status': 'ok','recommendation':suggest}
         
             return result
